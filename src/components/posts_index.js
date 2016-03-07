@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
 import { fetchPosts } from '../actions/index';
 
 export default () => {
@@ -9,7 +8,7 @@ export default () => {
 
 class PostsIndex extends Component {
   componentWillMount() {
-    this.props.fetchPosts;
+    this.props.fetchPosts();
   }
 
   render() {
@@ -19,9 +18,4 @@ class PostsIndex extends Component {
   }
 }
 
-function mapDispatchToProps(dispatch) {
-  // gives us access to this.props.fetchPosts
-  return bindActionCreators({ fetchPosts }, dispatch);
-}
-
-export default connect(null, mapDispatchToProps)(PostsIndex);
+export default connect(null, { fetchPosts })(PostsIndex);
