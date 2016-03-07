@@ -1,0 +1,15 @@
+{
+  "ecmaFeatures": {
+    "blockBindings": true,
+    "forOf": true,
+    "modules": true,
+    "arrowFunctions": true,
+    "jsx": true,
+    "classes": true,
+  },
+  "rules": {
+    "semi": [2, "always"],
+    "eol-last": true,
+  },
+  "parser":"babel-eslint"
+}
