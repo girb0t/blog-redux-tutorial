@@ -15,6 +15,9 @@ class PostsNew extends Component {
         <div className="form-group">
           <label>Title</label>
           <input type="text" className="form-control" {...title} />
+          <div className="text-help">
+            {title.error}
+          </div>
         </div>
 
          <div className="form-group">
@@ -33,13 +36,24 @@ class PostsNew extends Component {
   }
 }
 
+function validate(values) {
+  const errors = {};
+
+  if (!values.title) {
+    errors.title = 'Enter a username';
+  }
+
+  return errors;
+}
+
 // reduxForm() is similar to connect()
 // connect: first arg is mapStateToProps, 2nd is mapDispatchToProps
 // reduxForm: first arg is form config, 2nd is mapStateToProps, 3rd is mapDispatchToProps
 
 export default reduxForm({
   form: 'PostsNewForm',
-  fields: ['title', 'categories', 'content']
+  fields: ['title', 'categories', 'content'],
+  validate
 }, null, { createPost })(PostsNew);
 
 // user types something in...record it on application state (instead of component state):
