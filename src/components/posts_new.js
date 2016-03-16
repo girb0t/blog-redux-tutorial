@@ -16,7 +16,7 @@ class PostsNew extends Component {
           <label>Title</label>
           <input type="text" className="form-control" {...title} />
           <div className="text-help">
-            {title.error}
+            {title.touched ? title.error : ''}
           </div>
         </div>
 
