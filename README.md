@@ -3,7 +3,7 @@
 ##About
 Blogging app built by following the course at https://www.udemy.com/react-redux.
 
-Things learned/practiced: **Redux**, **React**, **ReactRouter**, **ES2015**
+Things learned/practiced: **Redux**, **React**, **ReactRouter**, **ReduxForm** **ES2015**
 
 ##Setup
 ```
