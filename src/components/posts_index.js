@@ -3,10 +3,6 @@ import { connect } from 'react-redux';
 import { fetchPosts } from '../actions/index';
 import { Link } from 'react-router';
 
-export default () => {
-  return <div>List of blog posts</div>
-}
-
 class PostsIndex extends Component {
   componentWillMount() {
     this.props.fetchPosts();
